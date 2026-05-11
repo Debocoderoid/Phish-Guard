@@ -28,12 +28,12 @@ service_account.json
 *.pth
 *.ckpt
 *.onnx
-*.pkl
+# *.pkl
 *.joblib
 
 # Datasets
-data/
-datasets/
+# data/
+# datasets/
 
 # Logs
 logs/
