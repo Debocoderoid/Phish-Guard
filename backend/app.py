@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
 from pydantic import BaseModel
-import pandas as pd
 import joblib
+import pandas as pd
 
 from feature_extractor import extract_features
+
+top_features = joblib.load("top_features.pkl")
 
 app = FastAPI()
 
@@ -32,6 +34,8 @@ def predict(data: URLRequest):
 
     input_df = pd.DataFrame([features])
 
+    input_df = input_df[top_features]
+
     prediction = model.predict(input_df)[0]
 
     probability = model.predict_proba(input_df)[0]
@@ -39,4 +43,4 @@ def predict(data: URLRequest):
 
     result = "phishing" if prediction == 1 else "legitimate"
 
-    return {"url": url, "prediction": result, "confidence": round(confidence * 100, 2)}
+    return {"url": url, "prediction": result, "confidence": confidence * 100}
