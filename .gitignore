@@ -1,0 +1,69 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables / secrets
+.env
+.env.*
+*.env
+
+# API keys / credentials
+credentials.json
+secrets.json
+service_account.json
+
+# ML artifacts
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+# *.pkl
+*.joblib
+
+# Datasets
+# data/
+# datasets/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy / lint cache
+.mypy_cache/
+.ruff_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
