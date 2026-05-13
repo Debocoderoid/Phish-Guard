@@ -1,1 +1,2 @@
-Download the model from here #
+https://huggingface.co/Debojyotir0y/phishguard_model/blob/main/phishguard_model.pkl
+Create an Hugging Face account and directly download from this link
