@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHISHGUARD</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+  <!-- Main Background -->
+  <div class="
+  {% if predict == 'good' %}
+    bg-gradient-to-r from-green-600 to-emerald-500
+  {% elif predict == 'bad' %}
+    bg-gradient-to-r from-red-600 to-rose-500
+  {% else %}
+    bg-gradient-to-r from-blue-600 to-indigo-500
+  {% endif %}">
+
+    <!-- Container -->
+    <div class="mx-auto px-4 py-16 lg:py-24 xl:py-28 max-w-7xl">
+
+      <div class="flex flex-col items-center justify-center">
+
+        <!-- Hero Section -->
+        <div class="max-w-3xl text-center">
+
+          <!-- Main Heading -->
+          <h1 class="text-5xl lg:text-7xl text-white font-light tracking-tight">
+
+            <!-- Project Name -->
+            <span class="block text-3xl lg:text-4xl font-semibold tracking-[0.3em] uppercase text-blue-100 mb-4">
+              PHISHGUARD
+            </span>
+
+            <!-- Dynamic Tagline -->
+            <span class="block font-bold font-serif mt-2">
+
+              {% if predict == 'good' %}
+                Congrats! You're safe
+              {% elif predict == 'bad' %}
+                Oh! Careful
+              {% else %}
+                Is your website safe?
+              {% endif %}
+
+            </span>
+
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="mt-6 text-gray-100 text-base">
+            AI-powered phishing detection for suspicious websites.
+          </p>
+
+        </div>
+
+        <!-- URL Form -->
+        <form
+          method="POST"
+          action="/"
+          class="mt-12 w-full max-w-2xl bg-white rounded-xl shadow p-2"
+        >
+
+          <div class="flex flex-col sm:flex-row gap-2">
+
+            <!-- Input Box -->
+            <div class="relative flex-1">
+
+              <!-- Input Icon -->
+              <div class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-5 h-5"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0z"/>
+
+                </svg>
+
+              </div>
+
+              <!-- URL Input -->
+              <input
+                type="text"
+                name="url"
+                id="url"
+                placeholder="Enter website URL (e.g. github.com)"
+                class="w-full py-4 pl-10 pr-4 rounded-xl border outline-none focus:ring-2 focus:ring-blue-400"
+                required
+              >
+
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="bg-blue-700 text-white px-6 py-4 rounded-xl flex items-center justify-center hover:bg-blue-800 transition"
+            >
+
+              <span>Check URL</span>
+
+              <!-- Arrow Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-4 h-4 ml-3"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
+              </svg>
+
+            </button>
+
+          </div>
+
+        </form>
+
+        <!-- Features Section -->
+        <div class="mt-12 flex flex-col sm:flex-row gap-6 text-gray-100">
+
+          <!-- Feature 1 -->
+          <div class="flex items-start gap-3 max-w-xs">
+
+            <!-- Shield Icon -->
+            <div class="bg-white/20 backdrop-blur-md p-3 rounded-xl border border-white/20">
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-6 h-6 text-cyan-200"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
+
+              </svg>
+
+            </div>
+
+            <!-- Text -->
+            <p>
+              AI-powered phishing detection for suspicious websites.
+            </p>
+
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="flex items-start gap-3 max-w-xs">
+
+            <!-- Lock Icon -->
+            <div class="bg-white/20 backdrop-blur-md p-3 rounded-xl border border-white/20">
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-6 h-6 text-emerald-200"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M16 11V8a4 4 0 10-8 0v3m-1 0h10a1 1 0 011 1v7a1 1 0 01-1 1H7a1 1 0 01-1-1v-7a1 1 0 011-1z"/>
+
+              </svg>
+
+            </div>
+
+            <!-- Text -->
+            <p>
+              Stay protected from fake login pages and malicious URLs.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
