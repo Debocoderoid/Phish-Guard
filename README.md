@@ -43,15 +43,39 @@ PHISHGUARD/
 │   ├── templates/
 │   │   └── index.html
 │   ├── app.py
-│   ├── feature_extractor.py
 │   └── requirements.txt
 │
 ├── datasets/
+|   └── malicious.csv
 │
 ├── models/
+│   ├── phishing.pkl
 │   ├── phishing_mnb.pkl
-│   └── vectorizer.pkl
+|   └── vectorizer.pkl.pkl
 │
 ├── notebooks/
+|   └── main.ipynb
 │
+├── .gitignore
 └── README.md
+
+
+## Installation & Setup
+1. Clone the Repository
+git clone https://github.com/Debocoderoid/Phish-Guard.git
+2. Move into the Project Directory
+cd Phish-Guard/backend
+3. Install Dependencies
+pip install -r requirements.txt
+4. Run the Flask App
+python app.py
+5. Open in Browser
+http://127.0.0.1:5000
+How It Works
+User enters a website URL
+URL is cleaned and processed
+TF-IDF vectorization is applied
+Trained ML model predicts:
+Good Website
+Phishing Website
+UI changes dynamically based on prediction
