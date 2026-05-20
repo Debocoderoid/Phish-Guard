@@ -58,24 +58,25 @@ PHISHGUARD/
 │
 ├── .gitignore
 └── README.md
+```
 
-
-## Installation & Setup
+### Installation & Setup
 1. Clone the Repository
-git clone https://github.com/Debocoderoid/Phish-Guard.git
+    git clone https://github.com/Debocoderoid/Phish-Guard.git
 2. Move into the Project Directory
-cd Phish-Guard/backend
+    cd Phish-Guard/backend
 3. Install Dependencies
-pip install -r requirements.txt
+    pip install -r requirements.txt
 4. Run the Flask App
-python app.py
+    python app.py
 5. Open in Browser
-http://127.0.0.1:5000
-How It Works
-User enters a website URL
-URL is cleaned and processed
-TF-IDF vectorization is applied
-Trained ML model predicts:
-Good Website
-Phishing Website
-UI changes dynamically based on prediction
+    http://127.0.0.1:5000
+   
+### How It Works
+1. User enters a website URL
+2. URL is cleaned and processed
+3. TF-IDF vectorization is applied
+4. Trained ML model predicts:
+5. Legitimate Website
+6. Phishing Website
+7. UI changes dynamically based on prediction
