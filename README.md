@@ -77,6 +77,7 @@ PHISHGUARD/
 2. URL is cleaned and processed
 3. TF-IDF vectorization is applied
 4. Trained ML model predicts:
-5. Legitimate Website
-6. Phishing Website
+   - Legitimate Website
+            or
+   - Phishing Website
 7. UI changes dynamically based on prediction
